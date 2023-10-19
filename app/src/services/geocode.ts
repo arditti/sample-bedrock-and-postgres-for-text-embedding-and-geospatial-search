@@ -20,7 +20,6 @@ const shiftXElements = (array: any[], xTimes: number) => {
 }
 export const getGeoCodeBoundAndPoint = async (address: string): Promise<IRes> => {
     const innerGeoCode = async (address: string): Promise<IRes | false> => {
-        return false
         const response = await getGeoCode(address)
         if (!response.data.results.length) { // In case there are no results, try to break some of the address
             return false
