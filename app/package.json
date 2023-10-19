@@ -1,0 +1,30 @@
+{
+  "name": "search-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev2": "ts-node-dev --respawn --transpile-only src/services/externals/googleMaps.ts",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "tsc --build",
+    "start": "node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@aws-sdk/types": "^3.428.0",
+    "@types/node": "^20.8.6",
+    "@types/pg": "^8.10.6",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@aws-sdk/client-bedrock-runtime": "^3.430.0",
+    "@googlemaps/google-maps-services-js": "^3.3.41",
+    "dotenv": "^16.3.1",
+    "fastify": "^4.24.2",
+    "pg": "^8.11.3",
+    "pgvector": "^0.1.5"
+  }
+}
